@@ -3,6 +3,8 @@
 samba::share_path: '/var/data'
 samba::share_name: 'share'
 samba::share_description: 'Samba Share'
+samba::share_group: 'media'
+samba::share_owner: 'media'
 samba::share_read_only: 'no'
 samba::share_inherit_permissions: 'yes'
 samba::server_log_path: '/var/log/samba/%m'

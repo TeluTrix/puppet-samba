@@ -10,6 +10,8 @@ class samba (
   Optional[String]  $share_description,
   Optional[String]  $share_read_only,
   Optional[String]  $share_inherit_permissions,
+  Optional[String]  $share_group,
+  Optional[String]  $share_owner,
   Optional[String]  $server_log_path,
   Optional[Integer] $server_log_level,
   Optional[String]  $server_role,
@@ -30,8 +32,8 @@ class samba (
   # Ensure share directory exists
   file { $share_path:
     ensure => 'directory',
-    owner  => 'nobody',
-    group  => 'nobody',
+    owner  => $share_owner,
+    group  => $share_group,
     mode   => $share_permissions,
   }
 
