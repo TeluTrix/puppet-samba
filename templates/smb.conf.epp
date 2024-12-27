@@ -1,0 +1,20 @@
+<%- | Optional[String]  $share_name,
+      Optional[String]  $share_description,
+      Optional[String]  $share_path,
+      Optional[String]  $share_read_only,
+      Optional[String]  $share_inherit_permissions,
+      Optional[String]  $server_log_path,
+      Optional[Integer]  $server_log_level,
+      Optional[Integer]  $server_role,
+| -%>
+
+[global]
+  log file = <%= $server_log_path %>
+  log level = <%= $server_log_level %>
+  server role = <%= $server_role %>
+
+[<%= $share_name %>]
+  description = <%= $share_description %>
+  path = <%= $share_path %>
+  read only = <%= $share_read_only %>
+  inherit permissions = <%= $share_inherit_permissions %>
