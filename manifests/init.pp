@@ -23,7 +23,7 @@ class samba (
 
   # Enable samba service
   service { 'smb':
-    ensure => 'present',
+    ensure => 'running',
     enable => true,
   }
 
