@@ -5,9 +5,16 @@
 # @example
 #   include samba
 class samba (
-  Optional[String] $share_path,
-  Optional[String] $share_permissions,
-  Optional[String] $smb_config_location,
+  Optional[String]  $share_path,
+  Optional[String]  $share_name,
+  Optional[String]  $share_description,
+  Optional[String]  $share_read_only,
+  Optional[String]  $share_inherit_permissions,
+  Optional[String]  $server_log_path,
+  Optional[Integer] $server_log_level,
+  Optional[String]  $server_role,
+  Optional[String]  $share_permissions,
+  Optional[String]  $smb_config_location,
 ) {
   # Install necessary packages
   package { ['samba', 'samba-common', 'samba-client']:

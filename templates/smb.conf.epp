@@ -5,7 +5,7 @@
       Optional[String]  $share_inherit_permissions,
       Optional[String]  $server_log_path,
       Optional[Integer]  $server_log_level,
-      Optional[Integer]  $server_role,
+      Optional[String]  $server_role,
 | -%>
 
 [global]
